@@ -1,0 +1,99 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  box-sizing: border-box;
+  color: var(--letras);
+}
+
+:root {
+  --Green: hsl(75, 94%, 57%);
+
+  --letras: hsl(0, 0%, 100%);
+
+  --colorlink: hsl(0, 0%, 20%);
+  --colormain: hsl(0, 0%, 12%);
+  --colorbg: hsl(0, 0%, 8%);
+
+  --shadow: 1px 1px 4px rgba(139, 139, 139, 0.315);
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--colorbg);
+}
+
+.container {
+  height: 75%;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  background-color: var(--colormain);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+h1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.img {
+  margin-top: 4%;
+  height: 15%;
+}
+.info {
+  height: 15%;
+}
+.location {
+  color: var(--Green);
+  margin-bottom: 7%;
+  margin-top: 2%;
+}
+
+nav {
+  margin-top:10%;
+  width: 100%;
+  height: 55%;
+}
+
+.links {
+  border-radius: 10px;
+  margin: auto;
+  width: 80%;
+  padding: 0.7rem;
+  background-color: var(--colorlink);
+  box-shadow: var(--shadow);
+}
+
+.links:hover {
+  background-color: var(--Green);
+  cursor: pointer;
+}
+
+ul {
+  height: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+a:hover {
+  color: var(--colorbg);
+}
