@@ -49,7 +49,6 @@ h1 {
 }
 li {
   width: 100%;
-  
 }
 img {
   width: 5rem;
@@ -82,8 +81,7 @@ nav {
   padding: 0.7rem;
   background-color: var(--colorlink);
   box-shadow: var(--shadow);
-  animation: pulso 2s infinite linear;
-  animation: bgPulso 5s infinite linear;
+  animation: pulso 2s infinite linear, bgPulso 5s infinite linear;
 }
 
 .links:hover {
@@ -101,6 +99,7 @@ ul {
 a {
   text-decoration: none;
   display: block;
+  color: black;
 }
 
 a:hover {
