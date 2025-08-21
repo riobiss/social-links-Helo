@@ -7,15 +7,17 @@
 }
 
 :root {
-  --Green: hsl(75, 94%, 57%);
+  --PinkNeon: hsl(320, 100%, 65%); /* rosa choque forte */
+  --PinkLight: hsl(330, 100%, 75%); /* rosa mais clarinho */
+  --PinkDark: hsl(330, 50%, 20%); /* fundo rosado escuro */
 
   --letras: hsl(0, 0%, 100%);
 
-  --colorlink: hsl(0, 0%, 20%);
+  --colorlink: var(--PinkDark);
   --colormain: hsl(0, 0%, 12%);
   --colorbg: hsl(0, 0%, 8%);
 
-  --shadow: 1px 1px 4px rgba(139, 139, 139, 0.315);
+  --shadow: 0 0 10px rgba(255, 20, 147, 0.6);
 }
 
 body {
@@ -39,10 +41,15 @@ body {
   align-items: center;
   text-align: center;
   justify-content: space-around;
+  border: 1px solid rgba(240, 192, 255, 0.384);
 }
 h1 {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+li {
+  width: 100%;
+  
 }
 img {
   width: 5rem;
@@ -57,13 +64,13 @@ img {
   height: 15%;
 }
 .location {
-  color: var(--Green);
+  color: var(--PinkNeon);
   margin-bottom: 7%;
   margin-top: 2%;
 }
 
 nav {
-  margin-top:10%;
+  margin-top: 10%;
   width: 100%;
   height: 55%;
 }
@@ -75,10 +82,12 @@ nav {
   padding: 0.7rem;
   background-color: var(--colorlink);
   box-shadow: var(--shadow);
+  animation: pulso 2s infinite linear;
+  animation: bgPulso 5s infinite linear;
 }
 
 .links:hover {
-  background-color: var(--Green);
+  background-color: var(--PinkNeon);
   cursor: pointer;
 }
 
@@ -96,4 +105,39 @@ a {
 
 a:hover {
   color: var(--colorbg);
+}
+
+@keyframes bgPulso {
+  0% {
+    background-color: hsl(330, 100%, 75%);
+  }
+  25% {
+    background-color: hsl(320, 100%, 65%);
+  }
+  50% {
+    background-color: hsl(320, 100%, 72%);
+  }
+  75% {
+    background-color: hsl(320, 100%, 70%);
+  }
+  100% {
+    background-color: hsl(330, 100%, 75%);
+  }
+}
+@keyframes pulso {
+  0% {
+    box-shadow: 0px -10px 20px rgba(255, 20, 147, 0.5);
+  }
+  25% {
+    box-shadow: 10px 0px 20px rgba(255, 105, 180, 0.6);
+  }
+  50% {
+    box-shadow: 0px 10px 25px rgba(255, 0, 127, 0.55);
+  }
+  75% {
+    box-shadow: -10px 0px 20px rgba(255, 182, 193, 0.5);
+  }
+  100% {
+    box-shadow: 0px -10px 20px rgba(255, 20, 147, 0.5);
+  }
 }
